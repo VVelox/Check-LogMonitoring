@@ -1,0 +1,41 @@
+#!perl
+
+#!/usr/bin/env perl
+
+use warnings;
+use strict;
+use Getopt::Long qw(:config no_ignore_case);
+use Pod::Usage;
+use Check::LogMonitoring;
+
+=head1 NAME
+
+check_ - 
+
+=cut
+
+sub version {
+        print 'check_networkspans v. ' . $Check::LogMonitoring::VERSION . "\n";
+}
+
+sub help {
+        pod2usage( -exitval => 255, -verbose => 2, -output => \*STDOUT );
+}
+
+my $help;
+my $version;
+GetOptions(
+        'version' => \$version,
+        'v'       => \$version,
+        'help'    => \$help,
+        'h'       => \$help,
+);
+
+if ($help) {
+        &help;
+        exit 255;
+}
+if ($version) {
+        &version;
+        exit 255;
+}

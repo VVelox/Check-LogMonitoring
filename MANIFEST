@@ -1,0 +1,12 @@
+Changes
+LICENSE
+MANIFEST
+Makefile.PL
+README.md
+ignore.txt
+lib/Check/LogMonitoring.pm
+src_bin/check_logmonitoring
+t/00-load.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t
